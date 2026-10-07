@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamales Doña Lupe | Tamales caseros</title>
+<meta name="description" content="Tamales caseros hechos a mano. Pide por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--terra:#c8553d;--gold:#f6ae2d;--magenta:#d81e5b;--green:#2a9d8f;--cream:#fff8ec;--dark:#3d1f14}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}
+a{color:var(--magenta)}
+.nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:.8rem 1.2rem;background:var(--terra)}
+.logo{font-family:Pacifico,cursive;color:#fff;text-decoration:none;font-size:1.4rem}
+.nav-toggle{background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+.nav-links{display:none;width:100%;flex-direction:column}
+.nav-links.open{display:flex}
+.nav-links a{color:#fff;text-decoration:none;padding:.6rem 0;font-weight:600}
+.papel-picado{height:40px;background:
+ linear-gradient(135deg,transparent 50%,var(--cream) 50%) 0 100%/20px 12px repeat-x,
+ radial-gradient(circle at 50% 40%,var(--cream) 4px,transparent 5px) 0 0/30px 30px,
+ linear-gradient(90deg,var(--magenta) 0 25%,var(--gold) 25% 50%,var(--green) 50% 75%,var(--terra) 75%) 0 0/240px 100%}
+.hero{text-align:center;padding:4rem 1.2rem;background:radial-gradient(circle,#ffe2a8,var(--cream))}
+.hero h1{font-family:Pacifico,cursive;font-size:2.6rem;color:var(--terra)}
+.tagline{font-size:1.15rem;margin:.6rem 0 1.6rem}
+.btn{display:inline-block;background:var(--magenta);color:#fff;border:0;padding:.85rem 1.6rem;border-radius:40px;font:600 1rem Poppins,sans-serif;text-decoration:none;cursor:pointer;box-shadow:0 4px 0 #8f1340}
+.btn:hover{transform:translateY(-2px)}
+.section{padding:3.5rem 1.2rem;max-width:1100px;margin:auto}
+.section.alt{max-width:none;background:var(--green);color:#fff}
+h2{font-family:Pacifico,cursive;text-align:center;font-size:2rem;color:var(--terra);margin-bottom:.4rem}
+.alt h2{color:var(--gold)}
+.sub{text-align:center;margin-bottom:2rem}
+.grid{display:grid;gap:1.2rem}
+.card{background:#fff;border-radius:16px;padding:1.4rem;border-top:6px solid var(--gold);box-shadow:0 6px 18px #0001;text-align:center}
+.card:nth-child(3n+2){border-color:var(--magenta)}.card:nth-child(3n){border-color:var(--green)}
+.emoji{font-size:2.5rem}
+.card h3{color:var(--terra)}
+.price{font-weight:700;font-size:1.3rem;color:var(--magenta);margin-top:.5rem}
+.price small{color:var(--dark);font-weight:400;font-size:.85rem}
+.about{max-width:700px;margin:auto;text-align:center;font-size:1.05rem}
+.order{display:grid;gap:2rem}
+form{display:grid;gap:.9rem;background:#fff;padding:1.4rem;border-radius:16px;box-shadow:0 6px 18px #0001}
+label{display:grid;font-weight:600;gap:.3rem}
+input,select{padding:.7rem;border:2px solid #f0d9b5;border-radius:10px;font:1rem Poppins,sans-serif}
+input:focus,select:focus{outline:none;border-color:var(--gold)}
+.info{background:var(--gold);padding:1.4rem;border-radius:16px;font-size:1.05rem}
+.info a{color:var(--dark);font-weight:600}
+footer{background:var(--dark);color:#fff;text-align:center}
+footer p{padding:1.2rem}
+@media(min-width:768px){
+ .nav-toggle{display:none}
+ .nav-links{display:flex;flex-direction:row;width:auto;gap:1.5rem}
+ .hero{padding:6rem 2rem}.hero h1{font-size:4rem}
+ .grid{grid-template-columns:repeat(3,1fr)}
+ .order{grid-template-columns:2fr 1fr}
+}
+
+.pay-box{text-align:center;margin:1.5rem auto 0;padding:1.2rem;border:3px dashed var(--magenta);border-radius:18px;max-width:520px}
+.btn-pay{font-size:1.15rem;padding:1rem 2rem;width:100%;max-width:360px}
+.pay-note{font-size:.85rem;margin:.6rem 0 0;opacity:.85}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a href="#inicio" class="logo">🫔 Doña Lupe</a>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav class="nav-links">
+    <a href="#menu">Menú</a><a href="#nosotros">Nosotros</a><a href="#pedidos">Pedidos</a>
+  </nav>
+</header>
+<div class="papel-picado" aria-hidden="true"></div>
+<section id="inicio" class="hero">
+  <h1>Tamales Doña Lupe</h1>
+  <p class="tagline">Hechos a mano, con el sazón de la abuela 🌽</p>
+  <a href="#pedidos" class="btn">¡Haz tu pedido!</a>
+</section>
+<section id="menu" class="section">
+  <h2>Nuestro Menú</h2>
+  <p class="sub">Precio por pieza · Docena con descuento</p>
+  <div class="grid">
+    <article class="card"><span class="emoji">🌶️</span><h3>Rojo de Puerco</h3><p>Carne de puerco en salsa de chile guajillo.</p><p class="price">$30 <small>· Docena $330</small></p></article>
+    <article class="card"><span class="emoji">🥬</span><h3>Verde de Pollo</h3><p>Pollo deshebrado en salsa verde de tomatillo.</p><p class="price">$30 <small>· Docena $330</small></p></article>
+    <article class="card"><span class="emoji">🧀</span><h3>Rajas con Queso</h3><p>Chile poblano y queso fresco derretido.</p><p class="price">$28 <small>· Docena $300</small></p></article>
+    <article class="card"><span class="emoji">🍫</span><h3>Mole</h3><p>Pollo bañado en mole poblano tradicional.</p><p class="price">$35 <small>· Docena $390</small></p></article>
+    <article class="card"><span class="emoji">🌽</span><h3>Elote</h3><p>Tamal dulce de elote tierno, suavecito.</p><p class="price">$25 <small>· Docena $270</small></p></article>
+    <article class="card"><span class="emoji">🍓</span><h3>Dulce</h3><p>Rosita con pasas y canela, ideal con champurrado.</p><p class="price">$25 <small>· Docena $270</small></p></article>
+  </div>
+</section>
+<section id="nosotros" class="section alt">
+  <h2>Nuestra Historia</h2>
+  <p class="about">Desde hace más de 20 años, Doña Lupe prepara tamales con recetas familiares, masa fresca e ingredientes de la región. Cada tamal se envuelve a mano y se cuece al vapor el mismo día. ¡Perfectos para posadas, cumpleaños o un antojo de domingo!</p>
+</section>
+<section id="pedidos" class="section">
+  <h2>Haz tu Pedido</h2>
+  <div class="order">
+    <form id="orderForm">
+      <label>Nombre<input name="nombre" required></label>
+      <label>Teléfono<input name="telefono" type="tel" required></label>
+      <label>WhatsApp o correo<input name="contacto"></label>
+      <label>Pedido<select name="pedido" required>
+        <option>Rojo de Puerco</option><option>Verde de Pollo</option><option>Rajas con Queso</option><option>Mole</option><option>Elote</option><option>Dulce</option><option>Surtido</option>
+      </select></label>
+      <label>Cantidad<input name="cantidad" type="number" min="1" value="12" required></label>
+      <button class="btn" type="submit">Enviar por WhatsApp 💬</button>
+    </form>
+    <div class="info">
+      <p>📞 <a href="tel:+526640000000">664 000 0000</a></p>
+      <p>💬 <a href="https://wa.me/526640000000">WhatsApp</a></p>
+      <p>✉️ <a href="mailto:pedidos@tamalesdonalupe.com">pedidos@tamalesdonalupe.com</a></p>
+      <p>📍 Tijuana, B.C.</p>
+      <p>🕗 Lun–Dom · 7:00–14:00</p>
+    </div>
+  </div>
+    <div class="pay-box">
+      <!-- CONFIGURAR PAGO CON SQUARE:
+           1. Crea una cuenta gratis en https://squareup.com
+           2. En el Dashboard ve a Online > Payment links / Enlaces de pago (los nombres pueden variar) y crea un enlace.
+           3. Copia el enlace (ej. https://square.link/u/XXXXXX).
+           4. Reemplaza el placeholder aquí abajo (href) y en SQUARE_PAYMENT_LINK del script. -->
+      <a id="squarePayBtn" class="btn btn-pay" href="https://square.link/u/TU-ENLACE-AQUI" target="_blank" rel="noopener">Pedir y pagar ahora 💳</a>
+      <p class="pay-note">Pago seguro con tarjeta, Apple Pay o Google Pay a través de Square.</p>
+    </div>
+</section>
+<footer>
+  <div class="papel-picado" aria-hidden="true"></div>
+  <p>© <span id="year"></span> Tamales Doña Lupe · Hecho con ❤️ en México</p>
+</footer>
+<script>
+// ===== SQUARE: reemplaza con tu enlace de pago real =====
+const SQUARE_PAYMENT_LINK = "https://square.link/u/TU-ENLACE-AQUI";
+const payBtn = document.getElementById("squarePayBtn");
+if (payBtn) payBtn.href = SQUARE_PAYMENT_LINK;
+const WHATSAPP_NUMBER = "526640000000"; // Placeholder: código país + número
+const toggle = document.querySelector(".nav-toggle"), links = document.querySelector(".nav-links");
+toggle.addEventListener("click", () => {
+  const open = links.classList.toggle("open");
+  toggle.setAttribute("aria-expanded", open);
+});
+links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("orderForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const d = new FormData(e.target);
+  const msg = `¡Hola! Quiero hacer un pedido 🫔\nNombre: ${d.get("nombre")}\nTeléfono: ${d.get("telefono")}\nContacto: ${d.get("contacto") || "-"}\nPedido: ${d.get("pedido")}\nCantidad: ${d.get("cantidad")}`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
+});
+
+</script>
+</body>
+</html>
